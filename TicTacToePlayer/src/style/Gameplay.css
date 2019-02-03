@@ -1,0 +1,33 @@
+*{
+    -fx-font-family: "Trebuchet MS";
+}
+
+.gameButton{
+    -fx-font-weight: narrow;
+    -fx-background-color:  #ffffff;
+    -fx-font-size: 60;
+    -fx-text-fill: #2C3E50;
+    -fx-alignment: CENTER;
+    -fx-effect: innershadow( gaussian, rgba( 0, 0, 0, 0.3 ), 8, 0, 0, 0 );
+}
+
+#gameplay_p1Name, #gameplay_p2Name, #gameplay_drawText{
+    -fx-font-size: 18;
+    -fx-text-fill: #2C3E50;
+    -fx-alignment: CENTER;
+}
+
+.score{
+    -fx-font-family: "Calibri Light";
+    -fx-font-weight: lighter;
+    -fx-font-size: 60;
+    -fx-text-fill: #3498DB;
+    -fx-alignment: CENTER;
+    -fx-font-style: italic;
+}
+
+#gameplay_p1Name, #gameplay_p2Name{
+    -fx-text-fill: #E74C3C;
+    
+}
+ 

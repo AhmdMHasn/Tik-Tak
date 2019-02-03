@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="TicTacToePlayer.jnlp">
+  <information>
+    <title>TicTacToePlayer</title>
+    <vendor>A7med</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="TicTacToePlayer.jar" size="192965" download="eager" />
+    <jar href="lib\TicTacToeInterface.jar" size="7190" download="eager" />
+    <jar href="lib\controlsfx-8.40.14.jar" size="1215643" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="main.MainApp"  name="TicTacToePlayer" />
+  <update check="always"/>
+</jnlp>

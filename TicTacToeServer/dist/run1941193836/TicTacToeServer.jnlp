@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="TicTacToeServer.jnlp">
+  <information>
+    <title>TicTacToeServer</title>
+    <vendor>A7med</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="TicTacToeServer.jar" size="71179" download="eager" />
+    <jar href="lib\TicTacToeInterface.jar" size="7190" download="eager" />
+    <jar href="lib\controlsfx-8.40.14.jar" size="1215643" download="eager" />
+    <jar href="lib\mysql-connector-java-8.0.13.jar" size="2132635" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="main.MyJavaServer"  name="TicTacToeServer" />
+  <update check="always"/>
+</jnlp>

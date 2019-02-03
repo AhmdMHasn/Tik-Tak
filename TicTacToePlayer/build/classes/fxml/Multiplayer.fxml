@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="mainGamePane" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MultiplayerController">
+   <children>
+      <VBox>
+         <children>
+            <VBox fx:id="topBar" onMouseClicked="#moveWindow" onMouseDragged="#moveWindow">
+               <children>
+                  <GridPane alignment="CENTER" minHeight="30.0" onMouseClicked="#moveWindow" onMouseDragged="#moveWindow">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" minHeight="20.0" text="Tik-Tak | iTi Project" textFill="#000000d9">
+                           <font>
+                              <Font name="Trebuchet MS" size="13.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER_RIGHT" GridPane.columnIndex="1" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </GridPane>
+                  <Pane prefHeight="1.0" style="-fx-background-color: #e2e2e2;" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="600.0" prefWidth="850.0">
+               <children>
+                  <HBox fx:id="currentTurn" alignment="CENTER" prefHeight="70.0" prefWidth="200.0" style="-fx-background-color: #eee; -fx-background-radius: 99;">
+                     <padding>
+                        <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <VBox alignment="CENTER_LEFT" prefWidth="400.0">
+                           <children>
+                              <Label fx:id="username" style="-fx-text-fill: #2d2d2d; -fx-font-size: 28;" stylesheets="@../style/MainStyle.css" text="Hi, Ahmed" textFill="#2d2d2d" />
+                           </children>
+                        </VBox>
+                        <HBox alignment="CENTER_RIGHT" prefWidth="400.0" spacing="5.0">
+                           <children>
+                              <Button alignment="CENTER" contentDisplay="CENTER" layoutX="286.0" layoutY="11.0" maxHeight="40.0" maxWidth="40.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" onAction="#takeScreenShot" style="-fx-background-color: 2c3e50; -fx-text-fill: #fff;" styleClass="myButton" stylesheets="@../style/MainStyle.css" textAlignment="CENTER">
+                                 <graphic>
+                                    <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../sources/screenshot.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></Button>
+                              <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="40.0" maxWidth="40.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" onAction="#displayRecord" style="-fx-background-color: 2c3e50; -fx-text-fill: #fff;" styleClass="myButton" stylesheets="@../style/MainStyle.css" textAlignment="CENTER">
+                                 <graphic>
+                                    <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../sources/record.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></Button>
+                              <Button fx:id="exit" alignment="CENTER" contentDisplay="CENTER" maxHeight="40.0" maxWidth="40.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" onAction="#exit_action" prefHeight="0.0" prefWidth="0.0" style="-fx-background-color: #E74C3C; -fx-text-fill: #fff;" styleClass="myButton" stylesheets="@../style/MainStyle.css" textAlignment="CENTER">
+                                 <graphic>
+                                    <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../sources/back.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></Button>
+                           </children>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="810.0" spacing="15.0">
+                     <children>
+                        <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" prefHeight="507.0" prefWidth="600.0" spacing="10.0" style="-fx-border-color: #e2e2e2; -fx-border-radius: 15;">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="300.0" prefWidth="300.0">
+                                 <children>
+                                    <GridPane fx:id="gameBoard" gridLinesVisible="true" hgap="2.0" maxHeight="300.0" maxWidth="300.0" minHeight="300.0" minWidth="300.0" prefHeight="300.0" prefWidth="300.0" vgap="2.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <ImageView fx:id="imageView_00" fitHeight="80.0" fitWidth="80.0" onMouseClicked="#setPattern" pickOnBounds="true" preserveRatio="true">
+                                             <GridPane.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </GridPane.margin>
+                                          </ImageView>
+                                          <ImageView fx:id="imageView_01" fitHeight="80.0" fitWidth="80.0" layoutX="20.0" layoutY="20.0" onMouseClicked="#setPattern" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                                             <GridPane.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </GridPane.margin>
+                                          </ImageView>
+                                          <ImageView fx:id="imageView_02" fitHeight="80.0" fitWidth="80.0" layoutX="120.0" layoutY="20.0" onMouseClicked="#setPattern" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+                                             <GridPane.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </GridPane.margin>
+                                          </ImageView>
+                                          <ImageView fx:id="imageView_10" fitHeight="80.0" fitWidth="80.0" layoutX="20.0" layoutY="20.0" onMouseClicked="#setPattern" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                                             <GridPane.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </GridPane.margin>
+                                          </ImageView>
+                                          <ImageView fx:id="imageView_12" fitHeight="80.0" fitWidth="80.0" layoutX="220.0" layoutY="20.0" onMouseClicked="#setPattern" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                             <GridPane.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </GridPane.margin>
+                                          </ImageView>
+                                          <ImageView fx:id="imageView_20" fitHeight="80.0" fitWidth="80.0" layoutX="20.0" layoutY="120.0" onMouseClicked="#setPattern" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+                                             <GridPane.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </GridPane.margin>
+                                          </ImageView>
+                                          <ImageView fx:id="imageView_21" fitHeight="80.0" fitWidth="80.0" layoutX="120.0" layoutY="120.0" onMouseClicked="#setPattern" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <GridPane.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </GridPane.margin>
+                                          </ImageView>
+                                          <ImageView fx:id="imageView_22" fitHeight="80.0" fitWidth="80.0" layoutX="220.0" layoutY="120.0" onMouseClicked="#setPattern" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                             <GridPane.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </GridPane.margin>
+                                          </ImageView>
+                                          <ImageView fx:id="imageView_11" fitHeight="80.0" fitWidth="80.0" layoutX="221.0" layoutY="121.0" onMouseClicked="#setPattern" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <GridPane.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </GridPane.margin></ImageView>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                              <Button fx:id="play_again" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#playAgain" style="-fx-background-color: #E74C3C; -fx-text-fill: #fff;" styleClass="myButton" stylesheets="@../style/MainStyle.css" text="Play Again?" textAlignment="CENTER" />
+                              <HBox alignment="CENTER" prefWidth="600.0" spacing="75.0">
+                                 <children>
+                                    <VBox>
+                                       <children>
+                                          <Label fx:id="player1_score" styleClass="score" stylesheets="@../style/Gameplay.css" text="0" />
+                                          <Label fx:id="player1_name" text="WIN">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox>
+                                       <children>
+                                          <Label fx:id="player2_score" styleClass="score" stylesheets="@../style/Gameplay.css" text="0" />
+                                          <Label fx:id="player2_name" text="LOSE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox>
+                                       <children>
+                                          <Label fx:id="draw_score" styleClass="score" stylesheets="@../style/Gameplay.css" text="0" />
+                                          <Label text="DRAW">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefWidth="250.0" style="-fx-background-radius: 15;">
+                          <items>
+                              <AnchorPane minHeight="150.0">
+                                 <children>
+                                    <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <HBox fx:id="currentTurn1" alignment="CENTER_LEFT" maxHeight="25.0" prefHeight="25.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #eee; -fx-background-radius: 99;">
+                                             <padding>
+                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                             </padding>
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#refreshListView" style="-fx-background-radius: 15;">
+                                                   <graphic>
+                                                      <ImageView fx:id="refresh" fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../sources/refresh.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                                <Label style="-fx-text-fill: #000; -fx-font-size: 18;" styleClass="textHeader" stylesheets="@../style/MainStyle.css" text="Online Players" />
+                                             </children>
+                                          </HBox>
+                                          <ListView fx:id="listView" onMouseClicked="#listViewClicked" prefHeight="200.0" prefWidth="200.0" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                              <VBox fx:id="multiplayer_messenger" minHeight="150.0" spacing="5.0">
+                                 <children>
+                                    <TextArea fx:id="multiplayer_msg_display" editable="false" prefHeight="200.0" prefWidth="200.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" />
+                                    <HBox alignment="CENTER">
+                                       <children>
+                                          <TextField fx:id="multiplayer_msg_input" onAction="#multiplayer_msg_send" prefWidth="280.0" promptText="Type your message here.." style="-fx-background-radius: 99;">
+                                             <font>
+                                                <Font name="System Italic" size="12.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <Button fx:id="multiplayer_msg_btn" minWidth="54.0" mnemonicParsing="false" onAction="#multiplayer_msg_send" prefWidth="50.0" style="-fx-font-size: 14;" styleClass="myButton" stylesheets="@../style/MainStyle.css" text="SEND" textAlignment="CENTER" textFill="WHITE" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </HBox>
+                  <Pane minHeight="20.0">
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </VBox.margin>
+                     <children>
+                        <Text fx:id="errorMessage" strokeType="OUTSIDE" strokeWidth="0.0">
+                           <font>
+                              <Font name="Consolas" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

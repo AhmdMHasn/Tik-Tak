@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.151" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AboutUsController">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../sources/Picture1.png" />
+                     </image>
+                  </ImageView>
+                  <Line endX="100.0" startX="-100.0" stroke="#2c3e50">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Line>
+                  <Text fill="#2c3e50" strokeType="OUTSIDE" strokeWidth="0.0" text="Meet the makers!" textAlignment="CENTER">
+                     <font>
+                        <Font name="Calibri" size="32.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="name00" alignment="CENTER" editable="false" maxWidth="300.0" minHeight="45.0" prefWidth="300.0" style="-fx-background-color: #eee;" styleClass="specialButton" stylesheets="@../style/MainStyle.css" text="Asmaa Fathy">
+                     <VBox.margin>
+                        <Insets top="7.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="name01" alignment="CENTER" editable="false" layoutX="135.0" layoutY="343.0" maxWidth="300.0" minHeight="45.0" prefWidth="300.0" style="-fx-background-color: #eee;" styleClass="specialButton" stylesheets="@../style/MainStyle.css" text="Ismail Mohamed">
+                     <VBox.margin>
+                        <Insets top="7.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="name02" alignment="CENTER" editable="false" layoutX="135.0" layoutY="388.0" maxWidth="300.0" minHeight="45.0" prefWidth="300.0" style="-fx-background-color: #eee;" styleClass="specialButton" stylesheets="@../style/MainStyle.css" text="Wael Mohamed">
+                     <VBox.margin>
+                        <Insets top="7.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="name03" alignment="CENTER" editable="false" layoutX="135.0" layoutY="366.0" maxWidth="300.0" minHeight="45.0" prefWidth="300.0" style="-fx-background-color: #eee;" styleClass="specialButton" stylesheets="@../style/MainStyle.css" text="Ahmed Mohamed Hassan">
+                     <VBox.margin>
+                        <Insets top="7.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Text fill="#2c3e50" layoutX="168.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jets Team" textAlignment="CENTER">
+                     <font>
+                        <Font name="Calibri" size="10.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="60.0" />
+                     </VBox.margin>
+                  </Text>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

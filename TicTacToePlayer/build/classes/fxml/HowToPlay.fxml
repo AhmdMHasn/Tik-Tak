@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.151" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HowToPlayController">
+   <children>
+      <VBox alignment="CENTER" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
+         <children>
+             <Label style="-fx-padding: 10; -fx-text-fill: #2C3E50;" styleClass="textHeader" stylesheets="@../style/MainStyle.css" text="How To Play" textFill="#2c3e50" />
+            <Line endX="30.0" startX="-100.0" stroke="#2c3e50" strokeLineCap="ROUND" strokeWidth="2.0" />
+            <ImageView fitHeight="200.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../sources/howtoplay.jpg" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </ImageView>
+            <GridPane minHeight="80.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="269.0" minWidth="10.0" prefWidth="155.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="396.0" minWidth="10.0" prefWidth="400.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER_RIGHT" minHeight="100.0" prefHeight="100.0" style="-fx-font-size: 18; -fx-text-fill: #E74C3C; -fx-font-weight: bold;" styleClass="textHeader" stylesheets="@../style/MainStyle.css" text="Have the First Player Go First" textAlignment="CENTER" wrapText="true">
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label minHeight="100.0" prefHeight="100.0" prefWidth="400.0" style="-fx-text-fill: #111111;" styleClass="loginText" stylesheets="@../style/MainStyle.css" text="Though traditionally, the first player goes with &quot;X&quot;, you can allow the first player to decide whether he wants to go with &quot;X&quot;s or &quot;O&quot;s. These symbols will be placed on the table, in the attempt to have three of them in a row." textAlignment="JUSTIFY" wrapText="true" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </GridPane>
+            <Line endX="300.0" layoutX="320.0" layoutY="144.0" startX="-100.0" stroke="#2b3d4f70" strokeLineCap="ROUND" />
+            <GridPane layoutX="10.0" layoutY="245.0" minHeight="80.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="269.0" minWidth="10.0" prefWidth="155.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="396.0" minWidth="10.0" prefWidth="400.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label layoutX="10.0" layoutY="10.0" minHeight="100.0" prefHeight="100.0" style="-fx-font-size: 18; -fx-text-fill: #E74C3C; -fx-font-weight: bold;" styleClass="textHeader" stylesheets="@../style/MainStyle.css" text="Have the Second Player Go Second" textAlignment="CENTER" wrapText="true">
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="169.0" layoutY="10.0" minHeight="100.0" prefHeight="100.0" prefWidth="400.0" style="-fx-text-fill: #111111;" styleClass="loginText" stylesheets="@../style/MainStyle.css" text="After the first player goes, then the second player should put down his symbol, which will be different from the symbol of the first player." textAlignment="JUSTIFY" wrapText="true" GridPane.columnIndex="1">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </GridPane>
+            <Line endX="300.0" layoutX="111.0" layoutY="325.0" startX="-100.0" stroke="#2b3d4f70" strokeLineCap="ROUND" />
+            <GridPane layoutX="10.0" layoutY="285.0" minHeight="80.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="269.0" minWidth="10.0" prefWidth="155.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="396.0" minWidth="10.0" prefWidth="400.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label layoutX="10.0" layoutY="10.0" minHeight="100.0" prefHeight="100.0" style="-fx-font-size: 18; -fx-text-fill: #E74C3C; -fx-font-weight: bold;" styleClass="textHeader" stylesheets="@../style/MainStyle.css" text="Keep Alternating Moves" textAlignment="CENTER" wrapText="true">
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="10.0" minHeight="100.0" prefHeight="100.0" prefWidth="400.0" style="-fx-text-fill: #111111;" styleClass="loginText" stylesheets="@../style/MainStyle.css" text="The first player to draw three of his or her symbols in a row, whether it is horizontal, vertical, or diagonal, has won tic-tac-toe. " textAlignment="JUSTIFY" wrapText="true" GridPane.columnIndex="1">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

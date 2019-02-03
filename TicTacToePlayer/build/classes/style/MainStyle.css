@@ -1,0 +1,70 @@
+*{
+    -fx-font-family: "Trebuchet MS";
+
+}
+
+#signin_username, #signin_password, #signup_username, #signup_password, #signup_repassword{
+    -fx-font-size: 18;
+    -fx-fill: #262626;
+}
+
+.myButton{
+    -fx-background-color:  #3498DB;
+    -fx-background-radius: 99;
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+}
+
+.myButton:hover{
+    -fx-background-color: #308cc3;
+    -fx-effect: dropshadow( gaussian , rgb(30, 30, 30), 5, 0, 0, 0);
+}
+
+.specialButton, .specialButton:pressed{
+    -fx-font-size: 18;
+    -fx-background-color: #2C3E50;
+    -fx-background-radius: 99;
+    -fx-border-radius: 99;
+    -fx-border-width: 3;
+    -fx-border-color: #ECF0F1;
+}
+
+#home_btn_aboutUs{
+    -fx-text-fill: #fff;
+}
+
+#home_btn_aboutUs:hover{
+    -fx-text-fill: #2C3E50;
+}
+
+.specialButton:hover{
+    -fx-background-color: #ECF0F1;
+    -fx-background-radius: 99;
+    -fx-border-radius: 99;
+    -fx-text-fill: #2C3E50;
+}
+
+.backgroundColor{
+    -fx-background-color: #2C3E50;
+}
+
+.loginText{
+    -fx-text-fill: #ECF0F1;
+}
+
+.textHeader{
+    -fx-font-size: 32;
+    -fx-font-weight: normal;
+    -fx-text-fill: #ffffff;
+}
+
+.exitButton{
+    -fx-background-color: #E74C3C;
+    -fx-background-radius: 99;
+    -fx-font-size: 11;
+    -fx-font-weight: bold;
+}
+
+.exitButton:hover{
+    -fx-background-color: #FF5442;
+}

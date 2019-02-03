@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<game id="Ahmed">
+    <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="step" move="0">
+        <letter>null</letter>
+        <xpos>0</xpos>
+        <ypos>0</ypos>
+    </step>
+    <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="step" move="1">
+        <letter>x</letter>
+        <xpos>0</xpos>
+        <ypos>2</ypos>
+    </step>
+    <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="step" move="2">
+        <letter>x</letter>
+        <xpos>0</xpos>
+        <ypos>2</ypos>
+    </step>
+    <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="step" move="3">
+        <letter>x</letter>
+        <xpos>0</xpos>
+        <ypos>2</ypos>
+    </step>
+    <step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="step" move="4">
+        <letter>x</letter>
+        <xpos>0</xpos>
+        <ypos>2</ypos>
+    </step>
+</game>
